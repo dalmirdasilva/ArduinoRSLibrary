@@ -1,0 +1,105 @@
+Rs is composed with 3 base elements. 
+
+One of then in chunk of memory that contais the data of everything, called "cluster":
+
+A cluster is an element of a double linked queue, therefore it has a pointer to the 
+next cluster and a poiter to the previous cluster, it has the space reserved to the 
+data.
+
+Another is "resource descriptor":
+
+The rs partition has a space reserved for a list of resource descriptors entries called resource descriptors table,
+each entry in this table is 4 bytes long and is used to hold the size, first cluster and flags of the corresponding resource.
+Each resource descriptor is a integer thar represets a index in such table.
+The flag of a entry has the information about the current availability of the resource entry.
+
+And finaly, "resource" itself:
+
+The resource is a virtual element, it exists only in execution time. Always when a resource
+description if opened, a resource instatnce is created to hold all data about the resource
+description, for exemple: the current pointer, the current cluster, cluster offset and so on.
+This element is a opaque structure.
+
+
+CLUSTER
+=================================================
+Size: 32 bytes
+Distribution:
+
+|n|p|dddddddddddddddddddddddddddddd|
+
+n: next cluster
+p: previous cluster
+d: cluster data
+
+
+
+
+RESOURCE DESCRIPTOR ENTRY
+=================================================
+Size: 4 bytes
+Distribution:
+
+|ss|c|f|
+
+s: resource size
+c: first cluster of the resource
+f: 00000000 - fisical flags of the resource
+   ||||||||_1=Opened, 0=Closed
+   |||||||_ 1=Read only
+   ||||||__ Unused
+   |||||___ Unused
+   ||||____ 1=Allocated resource description
+   |||_____ Unused
+   ||______ Unused
+   |_______ Unused
+    
+
+RESOURCE DESCRIPTOR
+=================================================  
+Integer poiting to the resource description table.
+
+
+RESOURCE
+=================================================
+
+Structure that contains:
+
+1 byte for: resource descriptor
+1 byte for: first cluster of the resource
+1 byte for: current cluster of the resource
+2 byte for: resource size
+2 byte for: resource position
+1 byte for: cluster offset
+1 byte for: flags
+          // 00000000
+          // ||||||||_ 1=Opened, 0=Closed (RS_RESOURCE_FLAG_BIT_OPENED)
+          // |||||||__ 1=Read only (RS_RESOURCE_FLAG_BIT_READ_ONLY)
+          // ||||||___ 1=Error on last read, 0=No error (RS_RESOURCE_FLAG_BIT_ERROR_ON_LAST_READ)
+          // |||||____ 1=Error on last write, 0=No error (RS_RESOURCE_FLAG_BIT_ERROR_ON_LAST_WRITE)
+          // ||||_____ 1=Allocated (RS_RESOURCE_FLAG_BIT_ALLOCATED)
+          // |||______ 1=Eof-reached (RS_RESOURCE_FLAG_BIT_EOR_REACHED)
+          // ||_______ Unused
+          // |________ Unused
+
+
+RS
+=================================================
+Is the first 32 bytes of the disc.
+
+FLAGS
+    // 00000000
+    // ||||||||_ 1=is mounted (RS_FLAG_BIT_DRIVER_MOUNTED)
+    // |||||||__ 1=read only (RS_FLAG_BIT_READ_ONLY)
+    // ||||||___ Unused
+    // |||||____ Unused
+    // ||||_____ Unused
+    // |||______ Unused
+    // ||_______ Unused
+    // |________ Unused
+
+
+DISC LAYOUT AFTER FORMATING
+=================================================
+
+

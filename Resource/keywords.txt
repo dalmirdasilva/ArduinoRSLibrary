@@ -1,0 +1,29 @@
+##########################################
+# Syntax Coloring Map For Resource
+##########################################
+
+##########################################
+# Datatypes (KEYWORD1)
+##########################################
+
+Resource	KEYWORD1
+
+##########################################
+# Methods and Functions (KEYWORD2)
+##########################################
+
+open    KEYWORD2
+close   KEYWORD2
+write   KEYWORD2
+writeBytes  KEYWORD2
+read    KEYWORD2
+readBytes   KEYWORD2
+seek    KEYWORD2
+truncate    KEYWORD2
+sync    KEYWORD2   
+rewind  KEYWORD2
+release KEYWORD2
+size    KEYWORD2
+tell    KEYWORD2
+eor KEYWORD2
+error   KEYWORD2

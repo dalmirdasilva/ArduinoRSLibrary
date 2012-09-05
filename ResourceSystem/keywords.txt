@@ -1,0 +1,18 @@
+##########################################
+# Syntax Coloring Map For ResourceSystem
+##########################################
+
+##########################################
+# Datatypes (KEYWORD1)
+##########################################
+
+ResourceSystem  KEYWORD1
+
+##########################################
+# Methods and Functions (KEYWORD2)
+##########################################
+
+mount   KEYWORD2
+umount  KEYWORD2
+totalSpace  KEYWORD2
+availableSpace  KEYWORD2
