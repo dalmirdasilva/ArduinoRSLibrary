@@ -1,0 +1,21 @@
+########################################################################
+# Syntax Coloring Map For SimpleResourceSystem
+########################################################################
+
+########################################################################
+# Datatypes (KEYWORD1)
+########################################################################
+
+SimpleResourceSystem	KEYWORD1
+
+########################################################################
+# Methods and Functions (KEYWORD2)
+########################################################################
+
+format  KEYWORD2
+mount   KEYWORD2
+umount  KEYWORD2
+alloc   KEYWORD2
+getResourceByCode   KEYWORD2
+totalSpace  KEYWORD2
+availableSpace  KEYWORD2

@@ -1,0 +1,24 @@
+########################################################################
+# Syntax Coloring Map For SimpleResourceIO
+########################################################################
+
+########################################################################
+# Datatypes (KEYWORD1)
+########################################################################
+
+SimpleResourceIO	KEYWORD1
+
+########################################################################
+# Methods and Functions (KEYWORD2)
+########################################################################
+
+associateIO	KEYWORD2
+getAssociatedIO	KEYWORD2
+open	KEYWORD2
+read	KEYWORD2
+write	KEYWORD2
+sync	KEYWORD2
+close	KEYWORD2
+getCacheHit	KEYWORD2
+getCacheMiss	KEYWORD2
+

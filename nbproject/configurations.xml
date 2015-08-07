@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="80">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df name="rs" root=".">
+      <df name="Resource">
+        <in>Resource.h</in>
+      </df>
+      <df name="ResourceIO">
+        <in>ResourceIO.h</in>
+      </df>
+      <df name="ResourceSystem">
+        <in>ResourceSystem.h</in>
+      </df>
+      <df name="rs">
+        <in>main.c</in>
+        <in>rs.c</in>
+        <in>rs.h</in>
+        <in>rs_init_partition.c</in>
+        <in>rs_init_partition.h</in>
+        <in>rs_io.c</in>
+        <in>rs_io.h</in>
+        <in>rs_spec.h</in>
+        <in>rs_spec_not_virtual.h</in>
+        <in>rs_util.c</in>
+        <in>rs_util.h</in>
+        <in>rs_util_spec.h</in>
+      </df>
+      <df name="SimpleArrayResourceIO">
+        <in>SimpleArrayResourceIO.cpp</in>
+        <in>SimpleArrayResourceIO.h</in>
+      </df>
+      <df name="SimpleExternalEepromResourceIO">
+        <in>SimpleExternalEepromResourceIO.cpp</in>
+        <in>SimpleExternalEepromResourceIO.h</in>
+      </df>
+      <df name="SimpleResource">
+        <in>SimpleResource.cpp</in>
+        <in>SimpleResource.h</in>
+      </df>
+      <df name="SimpleResourceIO">
+        <in>SimpleResourceIO.cpp</in>
+        <in>SimpleResourceIO.h</in>
+      </df>
+      <df name="SimpleResourceSystem">
+        <df name="examples">
+          <df name="complete_dump">
+            <in>complete_dump.ino</in>
+          </df>
+          <df name="copy_eeprom_to_resource">
+            <in>copy_eeprom_to_resource.ino</in>
+          </df>
+          <df name="dumping_rs_system">
+            <in>dumping_rs_system.ino</in>
+          </df>
+          <df name="format_using_mapped_eeprom">
+            <in>format_using_mapped_eeprom.ino</in>
+          </df>
+          <df name="formating_eeprom">
+            <in>formating_eeprom.ino</in>
+          </df>
+          <df name="resource_font_to_write_on_glcd">
+            <in>resource_font_to_write_on_glcd.ino</in>
+          </df>
+          <df name="rs_dump">
+            <in>rs_dump.ino</in>
+          </df>
+          <df name="write_font_inside_resource">
+            <in>write_font_inside_resource.ino</in>
+          </df>
+        </df>
+        <in>SimpleResourceSystem.cpp</in>
+        <in>SimpleResourceSystem.h</in>
+      </df>
+      <df name="SimpleVirtualResourceIO">
+        <in>SimpleVirtualResourceIO.cpp</in>
+        <in>SimpleVirtualResourceIO.h</in>
+      </df>
+      <df name="test">
+        <in>main.cpp</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>resource.bin</executablePath>
+          <ccTool>
+            <incDir>
+              <pElem>SimpleVirtualResourceIO</pElem>
+              <pElem>ResourceSystem</pElem>
+              <pElem>Resource</pElem>
+              <pElem>SimpleResourceIO</pElem>
+              <pElem>ResourceTypes</pElem>
+              <pElem>SimpleArrayResourceIO</pElem>
+              <pElem>.</pElem>
+              <pElem>SimpleExternalEepromResourceIO</pElem>
+              <pElem>../io/OutputStream</pElem>
+              <pElem>../io/ResourceInputStream</pElem>
+              <pElem>SimpleResourceSystem</pElem>
+              <pElem>../driver/memory/ExternalByteArrayEeprom</pElem>
+              <pElem>../io/ResourceOutputStream</pElem>
+              <pElem>../io/Seekable</pElem>
+              <pElem>../io/Closeable</pElem>
+              <pElem>rs</pElem>
+              <pElem>SimpleResource</pElem>
+              <pElem>ResourceIO</pElem>
+              <pElem>../io/InputStream</pElem>
+              <pElem>SimpleResourceTypes</pElem>
+              <pElem>../driver/memory/ExternalEeprom</pElem>
+            </incDir>
+          </ccTool>
+        </makeTool>
+      </makefileType>
+      <item path="SimpleArrayResourceIO/SimpleArrayResourceIO.cpp"
+            ex="false"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="SimpleExternalEepromResourceIO/SimpleExternalEepromResourceIO.cpp"
+            ex="false"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="SimpleResource/SimpleResource.cpp" ex="false" tool="3" flavor="0">
+      </item>
+      <item path="SimpleResourceIO/SimpleResourceIO.cpp"
+            ex="false"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="SimpleResourceSystem/SimpleResourceSystem.cpp"
+            ex="false"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="SimpleVirtualResourceIO/SimpleVirtualResourceIO.cpp"
+            ex="false"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="rs/main.c" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="rs/rs.c" ex="false" tool="3" flavor="0">
+      </item>
+      <item path="rs/rs_init_partition.c" ex="false" tool="3" flavor="0">
+      </item>
+      <item path="rs/rs_io.c" ex="false" tool="3" flavor="0">
+      </item>
+      <item path="rs/rs_spec.h" ex="true" tool="3" flavor="0">
+      </item>
+      <item path="rs/rs_spec_not_virtual.h" ex="true" tool="3" flavor="0">
+      </item>
+      <item path="rs/rs_util.c" ex="false" tool="3" flavor="0">
+      </item>
+      <item path="rs/rs_util_spec.h" ex="true" tool="3" flavor="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
